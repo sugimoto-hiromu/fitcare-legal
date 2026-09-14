@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | フィットケア</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfaf8;
+    --fg: #1c1b1a;
+    --muted: #6b6560;
+    --line: #e4dfd8;
+    --accent: #2B6E68;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --fg: #edeceb;
+      --muted: #9a958f;
+      --line: #34322f;
+      --accent: #6FBDB5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    line-height: 1.8;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 96px;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  h2 { font-size: 1.05rem; margin-top: 40px; margin-bottom: 12px; }
+  p, li { font-size: 0.95rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 12px 0 20px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+  .note {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>プライバシーポリシー</h1>
+  <p class="meta">
+    最終更新日: 2026年9月13日（ドラフト・未公開）<br>
+    対象アプリ: フィットケア（Bundle ID: com.hiromu.fitcare）<br>
+    運営者: 杉本 弘（個人開発）<br>
+    お問い合わせ: <a href="mailto:sugimotohiromu.ai@gmail.com">sugimotohiromu.ai@gmail.com</a>
+  </p>
+
+  <h2>1. 基本方針</h2>
+  <p>フィットケア（以下「本アプリ」）は、介護施設（グループホーム等）が入居者情報・日誌・スタッフ間の連絡を記録するための業務支援ツールです。本アプリが取り扱うすべてのデータ（入居者情報・日誌・お知らせ・スタッフ間の連絡等）は、本アプリを利用する施設が設置する端末（共有iPad等）の内部にのみ保存され、開発者を含む外部のサーバーへ送信されることはありません。広告配信・第三者分析ツール（アクセス解析SDK等）も組み込んでいません。</p>
+
+  <h2>2. 取り扱う情報とその利用目的</h2>
+  <p>本アプリは、利用施設の職員が業務のために入力する以下の情報を、端末内のデータベース（SwiftData）にのみ保存します。開発者はこれらの情報を一切受け取りません。</p>
+  <table>
+    <tr><th>情報</th><th>入力者</th><th>保存場所</th><th>目的</th></tr>
+    <tr><td>入居者情報（氏名・居室番号・介護度・生年月日・かかりつけ医療機関・NG事項・対応方法・服薬情報・既往症・家族構成等）</td><td>施設職員</td><td>端末内</td><td>入居者の安全な支援・申し送りのため</td></tr>
+    <tr><td>日誌・申し送り記録</td><td>施設職員</td><td>端末内</td><td>職員間での状況共有</td></tr>
+    <tr><td>お知らせ・行事予定</td><td>施設職員</td><td>端末内</td><td>施設全体への周知</td></tr>
+    <tr><td>スタッフ名簿（氏名・役職・連絡先等）</td><td>施設職員</td><td>端末内</td><td>職員間での連絡・記録者の識別</td></tr>
+    <tr><td>責任者への相談・報告、業務改善の意見箱への投稿</td><td>施設職員</td><td>端末内</td><td>施設内での情報共有・業務改善</td></tr>
+    <tr><td>暗証番号（責任者用・職員個人用）</td><td>施設職員</td><td>端末内（ソルト付きハッシュ化してKeychainに保存。生の暗証番号は保存しない）</td><td>操作権限の確認・記録者本人の確認</td></tr>
+  </table>
+  <p>これらの情報のうち、入居者の既往症・服薬情報は「要配慮個人情報」に該当します。本アプリはこれらの情報も含め外部送信を一切行いませんが、入居者・家族からの取得同意の確保、および端末そのものの管理・保管（パスコード設定、盗難・紛失時の対応等）は、本アプリを利用する施設の責任で行っていただく必要があります。</p>
+
+  <h2>3. 「スタッフの声」機能の匿名性について</h2>
+  <p>本アプリの「スタッフの声」機能のうち、責任者への相談・報告は記名式です。業務改善の意見箱は、投稿者が匿名・記名を選択できますが、本アプリは施設内で共有する1台の端末で動作するため、匿名を選択しても操作履歴や端末の利用状況から投稿者が特定される可能性を技術的に排除できません。本アプリは完全な匿名性を保証するものではなく、その旨をアプリ内の投稿画面にも明記しています。</p>
+
+  <h2>4. データの外部送信・バックアップについて</h2>
+  <p>本アプリには、施設の管理者（責任者用の暗証番号を持つ職員）が操作する、データのバックアップ書き出し機能があります。これは施設が指定するパスフレーズで暗号化されたファイルを端末内に作成する機能であり、自動的にインターネット上のサーバーへ送信されることはありません。書き出したファイルの保管・共有方法は、利用施設の責任で管理してください。</p>
+
+  <h2>5. 第三者への提供</h2>
+  <p>本アプリは、取り扱う情報を第三者へ提供・販売しません。</p>
+
+  <h2>6. データの削除</h2>
+  <p>入力した情報は、アプリ内の削除・退去操作、またはアプリ自体のアンインストールにより端末から削除されます。開発者側のサーバーにデータが残ることはありません。</p>
+
+  <h2>7. 本アプリの位置づけについて</h2>
+  <p>本アプリは、介護保険法上の法定記録（ケア記録・モニタリング記録等）の代替を目的としたものではなく、あくまで施設内での補助的な申し送り・情報共有を目的としたツールです。法定記録の管理については、別途施設所定の方法で行ってください。</p>
+
+  <h2>8. 本ポリシーの変更</h2>
+  <p>本ポリシーの内容を変更する場合は、本ページを更新し、最終更新日を書き換えます。重要な変更がある場合は、契約施設へ別途お知らせします。</p>
+
+  <h2>9. お問い合わせ</h2>
+  <p>本ポリシーやデータの取り扱いに関するご質問は、<a href="mailto:sugimotohiromu.ai@gmail.com">sugimotohiromu.ai@gmail.com</a> までご連絡ください。</p>
+
+  <p class="note">このページはドラフトであり、CEOの最終確認前の非公開版です。公開時には、この注記とお問い合わせ先メールアドレスの確認を行ってから公開してください。</p>
+</main>
+</body>
+</html>
